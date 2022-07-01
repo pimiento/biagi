@@ -8,6 +8,7 @@ int main(int argc, char *argv[]) {
   short buf[128];
   snd_pcm_t *playback_handle;
   snd_pcm_hw_params_t *hw_params;
+  unsigned int rate = 44100;
 
   if ((err = snd_pcm_open(&playback_handle, argv[1], SND_PCM_STREAM_PLAYBACK, 0)) < 0) {
     fprintf(
@@ -50,7 +51,7 @@ int main(int argc, char *argv[]) {
     exit (1);
   }
 
-  if ((err = snd_pcm_hw_params_set_rate_near(playback_handle, hw_params, 44100, 0)) < 0) {
+  if ((err = snd_pcm_hw_params_set_rate_near(playback_handle, hw_params, &rate, 0)) < 0) {
     fprintf(
       stderr, "cannot set sample rate (%s)\n",
       snd_strerror (err)
