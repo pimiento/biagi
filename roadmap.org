@@ -2,6 +2,10 @@
 ** DONE play one audiofile using gstreamer
    CLOSED: [2022-07-08 Fri 16:18]
 ** TODO get list of available audiocards
+   - alsa will show too many variants
+   - use PulseAudio
 ** TODO programmatically choose audiocard
+   - gstreamer can not do it
+   - I have to switch output using PulseAudio (what about Windows?)
 ** TODO run two audio-files in two different audiocards
 ** TODO change audiocard while audio is playing
