@@ -1,0 +1,7 @@
+* Roadmap to ver. 1.0
+** DONE play one audiofile using gstreamer
+   CLOSED: [2022-07-08 Fri 16:18]
+** TODO get list of available audiocards
+** TODO programmatically choose audiocard
+** TODO run two audio-files in two different audiocards
+** TODO change audiocard while audio is playing
